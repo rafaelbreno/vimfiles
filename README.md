@@ -11,3 +11,4 @@
 - [nerdcommenter](https://github.com/preservim/nerdcommenter)
 - [vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [material](https://github.com/kaicataldo/material.vim)
