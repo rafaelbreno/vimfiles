@@ -1,3 +1,4 @@
+"Installing Plugins
 call plug#begin()
 
 Plug 'scrooloose/nerdtree'
@@ -14,7 +15,11 @@ call plug#end()
 if (has('termiguicolors'))
 	set termguicolors
 endif
+
 let g:material_theme_style = 'ocean'
 colorscheme material
 
+let NERDTreeShowHidden=1
 
+set number relativenumber
+set nowrap

@@ -12,3 +12,16 @@
 - [vim-numbertoggle](https://github.com/jeffkreeftmeijer/vim-numbertoggle)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive)
 - [material](https://github.com/kaicataldo/material.vim)
+
+### Helpers
+- NERDTree
+	- Create File
+		- > :NERDTree
+		- > m
+		- > a
+		- > <enter file name with path\>
+	- Open Files
+		- > :NERDTree
+		- > t (new tab)
+		- > i (horizontal split)
+		- > s (vertical split)
