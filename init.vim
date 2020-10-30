@@ -26,6 +26,11 @@ autocmd vimenter * NERDTree
 set number relativenumber
 set nowrap
 
+
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+
 "Move Line Up/Down
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==

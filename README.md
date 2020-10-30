@@ -25,3 +25,13 @@
 		- > t (new tab)
 		- > i (horizontal split)
 		- > s (vertical split)
+
+### Tutor
+- _"A"_ - Go to the end of the line, with the cursor before the last character
+- _"$"_ - GO to the end of the line, with the cursor after the last character
+- _"nyy"_ 
+    - Copy 'n' lines
+- _"p"_ - paste lines
+- "no" - add 'n' new lines below the current line
+- "nO" - add 'n' new lines above the current line
+
