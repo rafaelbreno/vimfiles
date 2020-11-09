@@ -39,4 +39,7 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+let mapleader = ","
 
+"NerdTreeToggle
+nmap <leader>ne :NERDTreeToggle<cr>
