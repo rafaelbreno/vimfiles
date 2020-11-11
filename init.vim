@@ -8,6 +8,8 @@ Plug 'preservim/nerdcommenter'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-fugitive'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'StanAngeloff/php.vim'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
