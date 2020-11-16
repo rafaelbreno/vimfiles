@@ -1,21 +1,40 @@
 "Installing Plugins
 call plug#begin()
 
+" Misc
+Plug 'jiangmiao/auto-pairs'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'tpope/vim-fugitive'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 "coc-nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'scrooloose/nerdtree'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'jiangmiao/auto-pairs'
-Plug 'preservim/nerdcommenter'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'tpope/vim-fugitive'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+" PHP
+Plug 'tpope/vim-dispatch'             "| Optional
+Plug 'tpope/vim-projectionist'        "|
+Plug 'noahfrederick/vim-composer'     "|
+Plug 'noahfrederick/vim-laravel'
 Plug 'StanAngeloff/php.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Nerd
+Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdcommenter'
+
+" Theme
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+
+" DevOps
 Plug 'ekalinin/Dockerfile.vim'
 
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+
 call plug#end()
+
+
+
 
 "theme
 if (has('termiguicolors'))
