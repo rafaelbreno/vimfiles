@@ -23,6 +23,9 @@ Plug 'preservim/nerdcommenter'
 
 " Theme
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'fcpg/vim-orbital' " colorscheme orbital
+Plug 'ParamagicDev/vim-medic_chalk' " colorscheme medic_chalk
+Plug 'tpope/vim-vividchalk'
 
 " DevOps
 Plug 'ekalinin/Dockerfile.vim'
@@ -34,15 +37,13 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 
-
-
 "theme
 if (has('termiguicolors'))
-	set termguicolors
+    set termguicolors
 endif
 
-let g:material_theme_style = 'ocean'
-colorscheme material
+"let g:material_theme_style = 'ocean'
+colorscheme orbital
 
 let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree
@@ -73,6 +74,8 @@ nmap <silent><leader>nt :NERDTreeToggle<cr>
 "Remove Highlight
 nmap <silent><leader>rh :let @/=""<cr>
 
+"GoFmt
+nmap <silent><leader><leader>gf :GoFmt<cr>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
