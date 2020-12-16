@@ -8,7 +8,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 "coc-nvim
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile' }
+
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier']
 
 " PHP
 Plug 'tpope/vim-dispatch'             "| Optional
@@ -16,6 +18,11 @@ Plug 'tpope/vim-projectionist'        "|
 Plug 'noahfrederick/vim-composer'     "|
 Plug 'noahfrederick/vim-laravel'
 Plug 'StanAngeloff/php.vim'
+
+" JS
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " Nerd
 Plug 'scrooloose/nerdtree'
@@ -42,8 +49,8 @@ if (has('termiguicolors'))
     set termguicolors
 endif
 
-"let g:material_theme_style = 'ocean'
-colorscheme orbital
+let g:material_theme_style = 'darker-community'
+colorscheme material
 
 let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree
@@ -67,6 +74,10 @@ vnoremap <A-k> :m '<-2<CR>gv=gv
 
 let mapleader = ","
 
+"Save/Exit
+nmap <silent><leader>w :w<cr>
+nmap <silent><leader>q :wq<cr>
+
 "NerdTreeToggle
 nmap <silent><leader>ne :NERDTree<cr>
 nmap <silent><leader>nt :NERDTreeToggle<cr>
@@ -75,7 +86,10 @@ nmap <silent><leader>nt :NERDTreeToggle<cr>
 nmap <silent><leader>rh :let @/=""<cr>
 
 "GoFmt
-nmap <silent><leader><leader>gf :GoFmt<cr>
+nmap <silent><leader>gf :GoFmt<cr>
+
+"GoImports
+nmap <silent><leader>gi :GoImports<cr>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
