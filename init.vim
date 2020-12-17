@@ -10,7 +10,11 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "coc-nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile' }
 
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier']
+let g:coc_global_extensions =  [ 'coc-tslint-plugin', 'coc-tsserver']
+let g:coc_global_extensions += [ 'coc-css', 'coc-html', 'coc-json']
+let g:coc_global_extensions += [ 'coc-prettier', 'coc-svelte']
+let g:coc_global_extensions += [ 'coc-go', 'coc-phpls' ]
+let g:coc_global_extensions += [ 'coc-python' ]
 
 " PHP
 Plug 'tpope/vim-dispatch'             "| Optional
