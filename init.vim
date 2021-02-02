@@ -7,7 +7,10 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-fugitive'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dyng/ctrlsf.vim'
 
+" HTML
+Plug 'alvan/vim-closetag'
 
 "coc-nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile' }
@@ -18,6 +21,7 @@ Plug 'tpope/vim-projectionist'        "|
 Plug 'noahfrederick/vim-composer'     "|
 Plug 'noahfrederick/vim-laravel'
 Plug 'StanAngeloff/php.vim'
+Plug 'jwalton512/vim-blade'
 
 " JS
 Plug 'yuezk/vim-js'
@@ -83,6 +87,10 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.blade.php"
+autocmd Filetype php setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.blade.php set ft=blade
+autocmd FileType php set iskeyword+=$
 
 "Save/Exit
 nmap <silent><leader>w :w<cr>
@@ -103,6 +111,9 @@ nmap <silent><leader>gi :GoImports<cr>
 
 " CTRLP
 nmap <leader>p :CtrlP<cr>
+
+" CTRL Shift P
+nmap <leader>sp :CtrlSF
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
