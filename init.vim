@@ -43,6 +43,10 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
+" Reason
+Plug 'reasonml-editor/vim-reason-plus'
+Plug 'rescript-lang/vim-rescript'
+
 " Nerd
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
@@ -52,6 +56,8 @@ Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'fcpg/vim-orbital' " colorscheme orbital
 Plug 'ParamagicDev/vim-medic_chalk' " colorscheme medic_chalk
 Plug 'tpope/vim-vividchalk'
+Plug 'doums/darcula'
+Plug 'gryf/wombat256grf'
 
 " DevOps
 Plug 'ekalinin/Dockerfile.vim'
@@ -67,6 +73,12 @@ Plug 'slashmili/alchemist.vim'
 " Icons
 Plug 'kyazdani42/nvim-web-devicons'
 
+" LanguageClient
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
 call plug#end()
 
 " Leader
@@ -78,8 +90,8 @@ if (has('termiguicolors'))
     set termguicolors
 endif
 
-let g:material_theme_style = 'darker-community'
-colorscheme material
+"let g:material_theme_style = 'darker-community'
+colorscheme wombat256grf
 
 let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree
@@ -131,12 +143,6 @@ nmap <silent><leader>gf :GoFmt<cr>
 "GoImports
 nmap <silent><leader>gi :GoImports<cr>
 
-" CTRLP
-nmap <leader>p :CtrlP<cr>
-
-" CTRL Shift P
-nmap <leader>sp :CtrlSF
-
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -165,3 +171,12 @@ let g:lazygit_floating_window_winblend = 0 " transparency of floating window
 let g:lazygit_floating_window_scaling_factor = 0.9 " scaling factor for floating window
 let g:lazygit_floating_window_corner_chars = ['╭', '╮', '╰', '╯'] " customize lazygit popup window corner characters
 let g:lazygit_use_neovim_remote = 1 " fallback to 0 if neovim-remote is not installed
+
+" Open blank files/windows
+"" Horizontally
+nnoremap <leader><leader>i <cmd>:new<cr>
+"" Vertically
+nnoremap <leader><leader>s <cmd>:vnew<cr>
+
+" Reload init.vim file
+nnoremap <leader>r <cmd>:source $MYVIMRC<cr>
