@@ -70,9 +70,6 @@ Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
-" Icons
-Plug 'kyazdani42/nvim-web-devicons'
-
 " LanguageClient
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
@@ -180,3 +177,15 @@ nnoremap <leader><leader>s <cmd>:vnew<cr>
 
 " Reload init.vim file
 nnoremap <leader>r <cmd>:source $MYVIMRC<cr>
+
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
