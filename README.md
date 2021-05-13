@@ -26,6 +26,7 @@
 		- > i (horizontal split)
 		- > s (vertical split)
 
+
 ### Tutor
 - _"A"_ - Go to the end of the line, with the cursor before the last character
 - _"$"_ - GO to the end of the line, with the cursor after the last character
@@ -35,3 +36,19 @@
 - "no" - add 'n' new lines below the current line
 - "nO" - add 'n' new lines above the current line
 
+### Cleaning
+1. Pacman/Yay Cache
+    - > $ du -sh /var/cache/pacman
+        - Show cache size
+    - > $ yay -Scc
+        - Clear cache
+2. Pacman/Yay unused dependencies
+    - > $ yay -Qtdq
+        - Show unused dependencies
+    - > $ yay -Rns $(yay -Qtdq)
+        - Delete unused dependencies
+3. Arch cache
+    - > $ du -sh ~/.cache/
+        - Show cache size
+    - > $ rm -rf ~/.cache
+        - Delete cache
