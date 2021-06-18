@@ -1,6 +1,14 @@
 {
     "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
     "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "filetypes": ["go"],
+            "initializationOptions": {
+                "usePlaceholders": true
+            }
+        },
         "ccls": {
             "command": "ccls",
             "filetypes": [
