@@ -51,13 +51,8 @@ Plug 'rescript-lang/vim-rescript'
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 
-" Theme
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'fcpg/vim-orbital' " colorscheme orbital
-Plug 'ParamagicDev/vim-medic_chalk' " colorscheme medic_chalk
-Plug 'tpope/vim-vividchalk'
-Plug 'doums/darcula'
-Plug 'gryf/wombat256grf'
+"Color:
+Plug 'morhetz/gruvbox'
 
 "DevOps:
 Plug 'ekalinin/Dockerfile.vim'
@@ -95,7 +90,8 @@ if (has('termiguicolors'))
 endif
 
 "let g:material_theme_style = 'darker-community'
-colorscheme wombat256grf
+colorscheme gruvbox
+
 "INDENTATION:
 "------------
 "Highlights code for multiple indents without reselecting
@@ -205,7 +201,10 @@ vnoremap <leader>P "+P
 "SYNTAX HIGHLIGHTING:
 "--------------------
 syntax on
+
 "HIGHLIGHTING:
 "-------------
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 " Highlight the current line the cursor is on
 set cursorline
