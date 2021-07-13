@@ -22,14 +22,14 @@ Plug 'junegunn/fzf.vim'
 "" File finder
 
 """"""Telescope""""""
+"HTML:
 
-" HTML
 Plug 'alvan/vim-closetag'
 
-"coc-nvim
+"coc-nvim:
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile' }
 
-" PHP
+"PHP:
 Plug 'tpope/vim-dispatch'             "| Optional
 Plug 'tpope/vim-projectionist'        "|
 Plug 'noahfrederick/vim-composer'     "|
@@ -37,40 +37,39 @@ Plug 'noahfrederick/vim-laravel'
 Plug 'StanAngeloff/php.vim'
 Plug 'jwalton512/vim-blade'
 
-" JS
+"JS:
 Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
-" Reason
+"Reason:
 Plug 'reasonml-editor/vim-reason-plus'
 Plug 'rescript-lang/vim-rescript'
 
-" Nerd
+"Nerd:
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
 
-" Theme
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'fcpg/vim-orbital' " colorscheme orbital
-Plug 'ParamagicDev/vim-medic_chalk' " colorscheme medic_chalk
-Plug 'tpope/vim-vividchalk'
-Plug 'doums/darcula'
-Plug 'gryf/wombat256grf'
+"Color:
+Plug 'morhetz/gruvbox'
 
-" DevOps
+"DevOps:
 Plug 'ekalinin/Dockerfile.vim'
 
-" Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Go:
+Plug 'fatih/vim-go'
 
-" Elixir
+"Protobuf:
+Plug 'uarun/vim-protobuf'
+
+"Elixir:
+
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 
-" LanguageClient
+"LanguageClient:
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -81,6 +80,9 @@ call plug#end()
 " Leader
 let mapleader = ","
 
+"Increases the memory limit from 50 lines to 1000 lines
+:set viminfo='100,<1000,s10,h
+
 
 "theme
 if (has('termiguicolors'))
@@ -88,7 +90,13 @@ if (has('termiguicolors'))
 endif
 
 "let g:material_theme_style = 'darker-community'
-colorscheme wombat256grf
+colorscheme gruvbox
+
+"INDENTATION:
+"------------
+"Highlights code for multiple indents without reselecting
+vnoremap < <gv
+vnoremap > >gv
 
 let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree
@@ -189,3 +197,14 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+"SYNTAX HIGHLIGHTING:
+"--------------------
+syntax on
+
+"HIGHLIGHTING:
+"-------------
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+" Highlight the current line the cursor is on
+set cursorline
